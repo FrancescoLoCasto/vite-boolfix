@@ -20,8 +20,8 @@ export default {
       Boolfix
    </h1>
 
-   <input type="text" name="" id="">
-   <button>search</button>
+   <input type="text" v-model="store.searchText" @keyup.enter="$emit('searchMovie')">
+   <button @click="$emit('searchMovie')">Search Film</button>
 </div>
 </template>
 
