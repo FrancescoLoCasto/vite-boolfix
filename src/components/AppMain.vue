@@ -16,8 +16,14 @@ export default {
 </script>
 
 <template lang="">
-   <div>
-      
+   <div class="container-film">
+      <div class="film">
+         {{ movie.title }} - {{ movie.original_title }} - {{ movie.original_language }} - {{ movie.vote_average }}
+      </div>
+
+      <div class="tvShow">
+         {{ tvShow.name }} - {{ tvShow.original_name }} - {{ tvShow.original_language }} - {{ tvShow.vote_average }}
+      </div>
    </div>
 </template>
 

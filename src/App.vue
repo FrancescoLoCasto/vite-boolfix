@@ -31,7 +31,7 @@ export default {
       },
 
       searchTvshow(searchedTextFilm){
-         axios.get("https://api.themoviedb.org/3/movie/550?api_key=08440675644133f8318898097dda140e", {
+         axios.get("https://api.themoviedb.org/3/tv/550?api_key=08440675644133f8318898097dda140e", {
                params: {
                   query: searchedTextFilm,
                   page: 1,
@@ -64,7 +64,9 @@ export default {
 
    </section>
 
-
+   <section>
+      <AppMain/>
+   </section>
 
 
 </template>
