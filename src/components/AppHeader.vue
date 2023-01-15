@@ -15,14 +15,13 @@ export default {
 
 
 <template lang="">
-<div class="container">
-   <div class="row">
-      <di class="col-12">
-         <h2>
-            Boolflix
-         </h2>
-      </di>
-   </div>
+<div class="container-header">
+   <h1>
+      Boolfix
+   </h1>
+
+   <input type="text" name="" id="">
+   <button>search</button>
 </div>
 </template>
 
