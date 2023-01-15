@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "ajax": "^0.0.4",
+    "axios": "^1.2.2",
     "axos": "^0.0.1",
+    "bootstrap": "^5.2.3",
     "flag-icons": "^6.6.6",
     "sass": "^1.57.1",
     "scss": "^0.2.4",
