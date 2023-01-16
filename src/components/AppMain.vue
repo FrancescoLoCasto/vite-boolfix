@@ -17,12 +17,30 @@ export default {
 
 <template lang="">
    <div class="container-film">
-      <div class="film">
-         {{ movie.title }} - {{ movie.original_title }} - {{ movie.original_language }} - {{ movie.vote_average }}
+      <div class="film" v-for="movie in store.searchedMovie">
+         <h1>
+            Film!
+         </h1>
+         <h3>
+            {{ movie.title }} 
+         </h3>
+         <h4>
+            {{ movie.original_title }}
+         </h4>
+         <p>Rating Film: {{ movie.vote_average }}</p>
       </div>
 
-      <div class="tvShow">
-         {{ tvShow.name }} - {{ tvShow.original_name }} - {{ tvShow.original_language }} - {{ tvShow.vote_average }}
+      <div class="tvShow" v-for="tvShow in store.searchedTvshow">
+         <h1>
+            Tv Show!
+         </h1>
+         <h3>
+            {{ tvShow.name }}
+         </h3>
+         <h4>
+            {{ tvShow.original_name }}
+         </h4>
+         <p>Rating TvShow: {{ tvShow.vote_average }}</p>
       </div>
    </div>
 </template>
