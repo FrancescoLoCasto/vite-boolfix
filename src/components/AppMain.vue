@@ -17,7 +17,7 @@ export default {
 
 <template lang="">
    <div class="container-film">
-      <div class="film" v-for="movie in store.searchedMovie">
+      <div class="card" v-for="movie in store.searchedMovie">
          <h1>
             Film!
          </h1>
@@ -32,7 +32,7 @@ export default {
          <p>Rating Film: {{ movie.vote_average }}</p>
       </div>
 
-      <div class="tvShow" v-for="tvShow in store.searchedTvshow">
+      <div class="card" v-for="tvShow in store.searchedTvshow">
          <h1>
             Tv Show!
          </h1>
@@ -49,6 +49,18 @@ export default {
 </template>
 
 
-<style lang="">
-   
+<style lang="scss">
+
+   .container-film{
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+
+   .card{
+   width: 300px;
+   text-align: center;
+   color: rgb(149, 15, 15);
+   padding: 2rem;
+   }
 </style>
