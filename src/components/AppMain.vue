@@ -29,7 +29,9 @@ export default {
          <h3>
             {{ movie.original_title }}
          </h3>
-         <p>Rating Film: {{ movie.vote_average }}</p>
+         <p>Rating Movie: <i class="fa-solid fa-star" v-for="n in Math.ceil(movie.vote_average / 2)"></i>
+         <i class="fa-regular fa-star" v-for="n in Math.floor(5 - (movie.vote_average / 2))"></i>   
+         </p>
       </div>
 
       <div class="card" v-for="tvShow in store.searchedTvshow">
@@ -43,7 +45,9 @@ export default {
          <h3>
             {{ tvShow.original_name }}
          </h3>
-         <p>Rating TvShow: {{ tvShow.vote_average }}</p>
+         <p>Rating Tv Shows: <i class="fa-solid fa-star" v-for="n in Math.ceil(tvShow.vote_average / 2)"></i>
+         <i class="fa-regular fa-star" v-for="n in Math.floor(5 - (tvShow.vote_average / 2))"></i>   
+         </p>
       </div>
    </div>
 </template>
@@ -54,13 +58,14 @@ export default {
    .container-film{
       display: flex;
       flex-wrap: wrap;
+      background-color: rgb(63, 63, 63);
    }
 
 
    .card{
    width: 300px;
    text-align: center;
-   color: rgb(149, 15, 15);
+   color: rgb(255, 255, 255);
    padding: 2rem;
    }
 </style>
