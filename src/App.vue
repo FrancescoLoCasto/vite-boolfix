@@ -13,7 +13,7 @@ export default {
 
    methods : {
       searchMovie(searchedTextFilm){
-            axios.get("https://api.themoviedb.org/3/search/movie/550?api_key=08440675644133f8318898097dda140e", {
+            axios.get("https://api.themoviedb.org/3/search/movie?api_key=08440675644133f8318898097dda140e", {
                params: {
                   query: searchedTextFilm,
                   page: 1,
@@ -31,7 +31,7 @@ export default {
       },
 
       searchTvshow(searchedTextFilm){
-         axios.get("https://api.themoviedb.org/3/search/tv/550?api_key=08440675644133f8318898097dda140e", {
+         axios.get("https://api.themoviedb.org/3/search/tv?api_key=08440675644133f8318898097dda140e", {
                params: {
                   query: searchedTextFilm,
                   page: 1,
