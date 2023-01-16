@@ -21,12 +21,14 @@ export default {
          <h1>
             Film!
          </h1>
-         <h3>
-            {{ movie.title }} 
-         </h3>
+
+         <img :src="`https://image.tmdb.org/t/p/w342/${movie.poster_path}`" :alt="movie.title">
          <h4>
-            {{ movie.original_title }}
+            {{ movie.title }} 
          </h4>
+         <h3>
+            {{ movie.original_title }}
+         </h3>
          <p>Rating Film: {{ movie.vote_average }}</p>
       </div>
 
@@ -34,12 +36,13 @@ export default {
          <h1>
             Tv Show!
          </h1>
-         <h3>
-            {{ tvShow.name }}
-         </h3>
+         <img :src="`https://image.tmdb.org/t/p/w342/${tvShow.poster_path}`" :alt="tvShow.name">
          <h4>
-            {{ tvShow.original_name }}
+            {{ tvShow.name }}
          </h4>
+         <h3>
+            {{ tvShow.original_name }}
+         </h3>
          <p>Rating TvShow: {{ tvShow.vote_average }}</p>
       </div>
    </div>

@@ -17,7 +17,7 @@ export default {
 <template lang="">
 <div class="container-header">
    <h1>
-      Boolfix
+      Boolflix
    </h1>
 
    <input type="text" v-model="store.searchText" @keyup.enter="$emit('searchMovie')">
