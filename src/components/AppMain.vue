@@ -16,7 +16,7 @@ export default {
    methods: {
       getImagePath(imgFlag){
          if (imgFlag !== 'da' && imgFlag !== 'de' && imgFlag !== 'en' && imgFlag !== 'fr' && imgFlag !== 'hi' && imgFlag !== 'it' && imgFlag !== 'ja' && imgFlag !== 'zh'){
-            return new URL(`../assets/img/${imgFlag}.png`, import.meta.url).href;
+            
          }
       }
    },
@@ -37,8 +37,12 @@ export default {
          <h3>
             {{ movie.original_title }}
          </h3>
+         <p>Language Movie: <img class="flagImg" :src="getImagePath(movie.original_language)" alt="Non disponibile"></p>
          <p>Rating Movie: <i class="fa-solid fa-star" v-for="n in Math.ceil(movie.vote_average / 2)"></i>
          <i class="fa-regular fa-star" v-for="n in Math.floor(5 - (movie.vote_average / 2))"></i>   
+         </p>
+         <p>
+            Overview Film: {{ movie.overview }}
          </p>
       </div>
 
@@ -53,9 +57,12 @@ export default {
          <h3>
             {{ tvShow.original_name }}
          </h3>
-         <p>Language: <img class="flagImg" :src="getImagePath(movie.original_language)" alt="Non disponibile"></p>
+         <p>Language tvShow: <img class="flagImg" :src="getImagePath(tvShow.original_language)" alt="Non disponibile"></p>
          <p>Rating Tv Shows: <i class="fa-solid fa-star" v-for="n in Math.ceil(tvShow.vote_average / 2)"></i>
          <i class="fa-regular fa-star" v-for="n in Math.floor(5 - (tvShow.vote_average / 2))"></i>   
+         </p>
+         <p>
+            Overview TvShow: {{ tvShow.overview }}
          </p>
       </div>
    </div>
